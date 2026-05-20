@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir C:\\\\Users\\\\kento\\\\Projects\\\\portfolio2 *)",
+      "WebFetch(domain:devlucas.website)",
+      "WebFetch(domain:github.com)",
+      "Read(//c/Users/kento/.agents/skills/ui-ux-pro-max/**)",
+      "Bash(python scripts/search.py \"portfolio developer professional modern minimal\" --design-system -p \"Portfolio\")",
+      "Bash(Get-ChildItem -Recurse \"C:\\\\Users\\\\kento\\\\.claude\\\\skills\\\\ui-ux-pro-max\")",
+      "Bash(Select-Object FullName)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh api *)",
+      "Bash(npx create-next-app@latest *)"
+    ]
+  }
+}

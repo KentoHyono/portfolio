@@ -110,3 +110,48 @@ h1, h2, h3, .heading {
   font-family: var(--font-heading), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   font-weight: 800;
 }
+
+/* Floating circles */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -40px) scale(1.05); }
+  50% { transform: translate(-20px, -70px) scale(0.95); }
+  75% { transform: translate(-40px, -20px) scale(1.02); }
+}
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-35px, 30px) scale(1.03); }
+  50% { transform: translate(25px, 50px) scale(0.97); }
+  75% { transform: translate(40px, 10px) scale(1.04); }
+}
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -50px) scale(1.06); }
+  66% { transform: translate(-30px, 20px) scale(0.94); }
+}
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30% { transform: translate(-25px, -35px) scale(0.96); }
+  60% { transform: translate(35px, -15px) scale(1.04); }
+}
+@keyframes float-5 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(20px, 40px) scale(1.03); }
+  80% { transform: translate(-30px, 15px) scale(0.97); }
+}
+
+.float-circle-1 { animation: float-1 18s ease-in-out infinite; }
+.float-circle-2 { animation: float-2 22s ease-in-out infinite; }
+.float-circle-3 { animation: float-3 15s ease-in-out infinite; }
+.float-circle-4 { animation: float-4 20s ease-in-out infinite; }
+.float-circle-5 { animation: float-5 25s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float-circle-1,
+  .float-circle-2,
+  .float-circle-3,
+  .float-circle-4,
+  .float-circle-5 {
+    animation: none;
+  }
+}

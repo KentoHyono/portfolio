@@ -1,10 +1,42 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { ArrowDown, Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "./SocialIcons";
 import profile from "@/data/profile.json";
 
+function useTypingEffect(text: string, speed = 70, startDelay = 400) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let i = 0;
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          setDisplayed(text.slice(0, i + 1));
+          i++;
+        } else {
+          clearInterval(interval);
+          setDone(true);
+        }
+      }, speed);
+      return () => clearInterval(interval);
+    }, startDelay);
+
+    return () => clearTimeout(timeout);
+  }, [text, speed, startDelay]);
+
+  return { displayed, done };
+}
+
 export default function Hero() {
+  const line1 = profile.heroHeading.split("\n")[0];
+  const line2 = profile.heroHeading.split("\n")[1];
+
+  const first = useTypingEffect(line1, 65, 300);
+  const second = useTypingEffect(line2, 65, 300 + line1.length * 65 + 200);
+
   return (
     <section
       id="home"
@@ -26,19 +58,40 @@ export default function Hero() {
         </div>
 
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="block text-foreground">
-            {profile.heroHeading.split("\n")[0]}
+          <span className="block text-foreground min-h-[1.2em]">
+            {first.displayed}
+            {!first.done && (
+              <span className="inline-block w-[3px] translate-y-[2px] animate-pulse bg-foreground ml-0.5" style={{ height: "0.85em" }} />
+            )}
           </span>
-          <span className="block bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
-            {profile.heroHeading.split("\n")[1]}
+          <span className="block bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent min-h-[1.2em]">
+            {second.displayed || first.done ? second.displayed : ""}
+            {first.done && !second.done && second.displayed !== undefined && (
+              <span className="inline-block w-[3px] translate-y-[2px] animate-pulse bg-primary ml-0.5" style={{ height: "0.85em" }} />
+            )}
+            {second.done && (
+              <span className="inline-block w-[3px] translate-y-[2px] ml-0.5 bg-primary animate-pulse" style={{ height: "0.85em" }} />
+            )}
           </span>
         </h1>
 
-        <p className="mx-auto mt-6 max-w-xl text-lg text-muted leading-relaxed">
+        <p
+          className="mx-auto mt-6 max-w-xl text-lg text-muted leading-relaxed transition-all duration-500"
+          style={{
+            opacity: second.done ? 1 : 0,
+            transform: second.done ? "translateY(0)" : "translateY(8px)",
+          }}
+        >
           {profile.heroDescription}
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-500"
+          style={{
+            opacity: second.done ? 1 : 0,
+            transform: second.done ? "translateY(0)" : "translateY(8px)",
+          }}
+        >
           <a
             href="#projects"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0"
@@ -55,7 +108,13 @@ export default function Hero() {
         </div>
 
         {/* Social links */}
-        <div className="mt-10 flex items-center justify-center gap-5">
+        <div
+          className="mt-10 flex items-center justify-center gap-5 transition-all duration-500"
+          style={{
+            opacity: second.done ? 1 : 0,
+            transform: second.done ? "translateY(0)" : "translateY(8px)",
+          }}
+        >
           <a
             href={profile.socialLinks.github}
             target="_blank"
@@ -82,7 +141,6 @@ export default function Hero() {
             <Mail size={20} />
           </a>
         </div>
-
       </div>
 
       {/* Scroll indicator */}

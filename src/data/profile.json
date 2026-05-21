@@ -1,0 +1,16 @@
+{
+  "name": "Kento Hyono",
+  "title": "Full Stack Developer",
+  "subtitle": "Building thoughtful digital experiences",
+  "bioFirst": "I'm a full-stack developer focused on solving real-world problems to make life more efficient and enjoyable. With expertise in modern web architectures like React and FastAPI, I also have a deep passion for learning/implementing cloud architectures and CI/CD operations.",
+  "bioSecond": "With a philosophy of continuous improvement, I'm committed to learning innovative technologies and applying them to enhance our lives. I pick up new things quickly and I'm always looking for the next challenge. Outside of coding, I stay active through working out and playing sports.",
+  "heroHeading": "Making Life\nJoyful with Tech",
+  "heroDescription": "Full-stack developer focused on building impactful applications with modern technologies and clean design.",
+
+  "socialLinks": {
+    "github": "https://github.com/kentohyono",
+    "linkedin": "https://linkedin.com/in/kento-hyono",
+    "email": "mailto:keeeeento4649@icloud.com"
+  },
+  "resumeUrl": "/resume.pdf"
+}

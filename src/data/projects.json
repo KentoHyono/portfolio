@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gomokuai",
+    "title": "Gomoku AI Web App",
+    "description": "Online Gomoku (Five-in-a-Row) game where players can compete against another human locally or challenge an AI opponent. Frontend built with Vite, backend with Python/FastAPI.",
+    "tags": ["Python", "FastAPI", "React.js", "AI"],
+    "image": "/projects/gomoku.png",
+    "liveUrl": "https://gomoku-web-agent.vercel.app/",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "chip-settler",
+    "title": "Chip Settler",
+    "description": "A mobile‑responsive web app that helps poker players quickly calculate who owes money to whom at the end of a home game, eliminating manual calculation that is prone to mistakes.",
+    "tags": ["React.js", "GitHub Action", "AWS S3", "AWS CloudFront"],
+    "image": "/projects/chip-settler.png",
+    "liveUrl": "https://www.chip-settler.online/",
+    "githubUrl": "https://github.com/KentoHyono/chips-settler",
+    "featured": true
+  },
+  {
+    "id": "shizenweb",
+    "title": "Shizen Sushi Restaurant Website",
+    "description": "A responsive production restaurant website for a local sushi restaurant using Next.js and Typescript, based on the business owner's constant weekly feedback, along with CMS driven menu and content system.",
+    "tags": ["Next.js", "TypeScript", "Sanity.io", "Vercel"],
+    "image": "/projects/shizen-website.png",
+    "liveUrl": "https://shizensushi.ca/",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "workoutapp",
+    "title": "Workout Tracker App",
+    "description": "A complete workout tracker built with Android Studio and Java. Features external API integration, local database, and statistics graphs for tracking fitness progress.",
+    "tags": ["Java", "AndroidStudio", "API Integration", "SQLite"],
+    "image": "/projects/workoutapp.png",
+    "liveUrl": "",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "nomnom",
+    "title": "Nom Nom Express",
+    "description": "Full-stack restaurant ordering web app for school project built with the LAMP stack among 4 students team, integrating a secure payment gateway for seamless online food ordering.",
+    "tags": ["PHP", "LAMP Stack", "Stripe Payment"],
+    "image": "",
+    "liveUrl": "",
+    "githubUrl": "",
+    "featured": false
+  },
+  {
+    "id": "benkei",
+    "title": "Benkei - Samurai Duel Game",
+    "description": "A 3D samurai duel game with a minimal combat system for two players, focusing on skill-based interaction. Built with Godot.",
+    "tags": ["Godot", "GDScript", "Blender", "3D Modeling", "Animation"],
+    "image": "",
+    "liveUrl": "",
+    "githubUrl": "",
+    "featured": false
+  },
+  {
+    "id": "dvdcorner",
+    "title": "DVD Corner Bouncer",
+    "description": "A retro-style Python game that mimics the classic DVD logo bouncing around the screen. The player aims to hit the logo into the corner using a smiley face.",
+    "tags": ["Python", "Pygame"],
+    "image": "",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/KentoHyono/DVDCorner",
+    "featured": false
+  }
+]

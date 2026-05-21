@@ -10,7 +10,16 @@
       "Bash(Select-Object FullName)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(gh api *)",
-      "Bash(npx create-next-app@latest *)"
+      "Bash(npx create-next-app@latest *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node -e \"const m = require\\('lucide-react'\\); console.log\\(Object.keys\\(m\\).filter\\(k => k.toLowerCase\\(\\).includes\\('github'\\) || k.toLowerCase\\(\\).includes\\('linkedin'\\)\\)\\)\")",
+      "Bash(node -e \"import\\('lucide-react'\\).then\\(m => console.log\\(Object.keys\\(m\\).filter\\(k => k.toLowerCase\\(\\).includes\\('github'\\) || k.toLowerCase\\(\\).includes\\('linkedin'\\)\\)\\)\\)\")",
+      "Bash(node *)",
+      "Bash(timeout 8 bash -c 'until curl -s http://localhost:3000 > /dev/null 2>&1; do sleep 1; done; echo \"Server ready\"')",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3001)"
     ]
   }
 }

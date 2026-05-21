@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "skills": [
+        { "name": "TypeScript", "icon": "code-2", "level": 90 },
+        { "name": "React", "icon": "atom", "level": 95 },
+        { "name": "Next.js", "icon": "globe", "level": 95 },
+        { "name": "TailwindCSS", "icon": "palette", "level": 92 },
+        { "name": "Vue.js", "icon": "layout", "level": 80 }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "skills": [
+        { "name": "Python", "icon": "leaf", "level": 95 },
+        { "name": "Java", "icon": "coffee", "level": 65 },
+        { "name": "Node.js", "icon": "server", "level": 85 },
+        { "name": "PostgreSQL", "icon": "database", "level": 82 },
+        { "name": "REST APIs", "icon": "link", "level": 90 }
+      ]
+    },
+    {
+      "id": "devops",
+      "label": "DevOps & Tools",
+      "skills": [
+        { "name": "AWS", "icon": "triangle", "level": 95 },
+        { "name": "Git", "icon": "git-branch", "level": 90 },
+        { "name": "Docker", "icon": "container", "level": 80 },
+        { "name": "CI/CD", "icon": "refresh-cw", "level": 75 },
+        { "name": "Cypress", "icon": "shield", "level": 80 }
+      ]
+    }
+  ]
+}
